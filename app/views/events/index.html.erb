@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event name</title>
+</head>
+<body>
+<div>
+  <% @events.each do |event| %>
+    <div>
+      <%= event.name %>
+      <%= event.body %>
+    </div>
+  <% end %>
+</div>
+</body>
+</html>
