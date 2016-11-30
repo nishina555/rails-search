@@ -5,7 +5,12 @@ class EventsController < ApplicationController
 
   def search
     @events = @q.result(distinct: true)
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @events }
+    end
   end
+
 
   private
   def set_search
